@@ -1,0 +1,134 @@
+/****** Variables ******/
+
+$white: #fff
+$black: #000
+
+$purple-one: #6a3093
+$purple-two: #670ec4
+
+
+
+/****** Body ******/
+*,
+*::after,
+*::before,
+html
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+  box-sizing: border-box
+  text-rendering: optimizeLegibility
+
+html
+  font-size: 16px
+
+body
+  display: flex
+  height: 100%
+  max-width: 100%
+  min-height: 100vh
+  overflow-x: hidden
+  overflow-y: auto
+  position: relative
+  width: 100vw
+  background: linear-gradient(to right, $purple-one, $purple-two)
+  flex-wrap: wrap
+  padding: 70px
+
+a
+  text-decoration: none
+
+
+
+/****** Global Elements ******/
+.header
+  display: flex
+  position: relative
+  width: 100%
+  max-height: 75px
+  margin-bottom: 2em
+
+.title
+  color: $white
+  font-size: 3em
+  font-family: 'Roboto', sans-serif
+  font-weight: 600
+  margin: 0
+
+.title,
+.version
+  color: $white
+  font-family: 'Roboto', sans-serif
+
+.add-scheduling
+  background-color: $white
+  border: none
+  border-radius: 100%
+  height: 50px  //
+  width: 50px
+  color: $purple-two
+  font-size: 1.5em
+  transition: color, border, background-color .3s ease-in-out
+  display: flex
+  justify-content: center
+  align-items: center
+  cursor: pointer
+  position: absolute
+  right: 0
+
+  &:hover
+    color: $white
+    border: 3px solid $white
+    background-color: $purple-two
+
+.schedules
+  display: grid
+  width: 100%
+  grid-template-columns: repeat(auto-fit, minmax(490px, 1fr))
+  //grid-template-rows: repeat(6, 1fr)
+  grid-column-gap: 50px
+  grid-row-gap: 20px
+
+
+.schedule__card
+  background-color: $white
+  border-radius: 5px
+  padding: 2ch
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  position: relative
+
+.schedule__card__date,
+.schedule__card__time,
+.schedule__card__task,
+.schedule__card__user
+  font-family: 'Roboto', sans-serif
+  margin-right: .5em
+
+.schedule__card__task
+  font-weight: bold
+
+.schedule__card__buttons
+  position: absolute
+  right: 2ch
+
+.schedule__card__buttons__edit,
+.schedule__card__buttons__delete
+  margin-right: .5em
+  box-shadow: 0
+  border: 0
+  background-color: $black
+  height: 1.2em
+  width: 1.2em
+  border-radius: 1em
+  cursor: pointer
+  transition: opacity .3s ease-in-out
+
+  &:hover
+    opacity: .7
+
+.schedule__card__buttons__edit
+  background-color: #f1c40f
+
+.schedule__card__buttons__delete
+  background-color: #e74c3c
