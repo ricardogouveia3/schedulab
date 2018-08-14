@@ -67,18 +67,72 @@ a
   width: 50px
   color: $purple-two
   font-size: 1.5em
-  transition: color, border, background-color .3s ease-in-out
+  transition: color, border, background-color, transform .3s ease-in-out
   display: flex
   justify-content: center
   align-items: center
   cursor: pointer
   position: absolute
   right: 0
+  z-index: 20
 
   &:hover
     color: $white
     border: 3px solid $white
     background-color: $purple-two
+
+.modal__scheduling
+  position: absolute
+  left: 0
+  top: 0
+  z-index: 10
+  background-color: rgba(0, 0, 0, .5)
+  width: 100vw
+  height: 100vh
+  display: none
+  justify-content: center
+  align-items: center
+
+.modal__scheduling__card
+  background-color: $white
+  padding: 3ch
+  border-radius: 5px
+  display: flex
+  flex-wrap: wrap
+
+.modal__scheduling__card__form input,
+.modal__scheduling__card__form label
+  display: block
+  width: 100%
+  font-family: 'Roboto', sans-serif
+
+.modal__scheduling__card__form input
+  margin-bottom: 1em
+  padding: .8ch 1ch
+  border-radius: 5px
+
+  &:placeholder
+    color: gray
+
+  &:last-child
+    margin-bottom: 0
+
+.modal__scheduling__card__form label
+  font-size: .9em
+  margin-bottom: .5em
+
+.modal__scheduling__card__form input[type="submit"]
+  font-size: .9em
+  padding: 2ch
+  border: 0
+  cursor: pointer
+  background-color: #2ecc71
+  font-weight: bold
+  transition: opacity .3s ease-in-out
+  color: $white
+
+  &:hover
+    opacity: .7
 
 .schedules
   display: grid
@@ -132,3 +186,20 @@ a
 
 .schedule__card__buttons__delete
   background-color: #e74c3c
+
+
+
+/****** Animation ******/
+.destroy
+  animation: destroy-card .3s linear
+  animation-fill-mode: forwards
+
+@keyframes destroy-card
+  0%
+    opacity: 1
+  99%
+    opacity: 0
+    display: flex
+  100%
+    opacity: 0
+    display: none

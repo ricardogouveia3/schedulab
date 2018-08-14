@@ -22,11 +22,29 @@ html(lang='pt-br')
     header.header
       h1.title  Schedulab
 
-      button.add-scheduling +
+      button#addScheduling.add-scheduling +
+
+    #modalSchedulingContainer.modal__scheduling
+      .modal__scheduling__darken
+      .modal__scheduling__card
+        h2#schedulingTitle.modal_scheduling__card__title Título
+        form.modal__scheduling__card__form
+          label(for="schedulingData") Início da reserva
+          input#schedulingData(type="datetime-local", name="reservationStart")
+          label(for="schedulingData") Final da reserva
+          input#schedulingData(type="datetime-local", name="reservationEnd")
+          label(for="schedulingData") Propósito
+          input#schedulingData(type="text", name="reservationPorprouse")
+          label(for="schedulingData") Responsável
+          input#schedulingData(type="text", name="reservationUser")
+
+          input#schedulingData(type="submit", name="reservationSubmit" value="ConfirmText")
+
+
 
     .schedules
 
-      each i in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+      each i in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         .schedule__card
           span.schedule__card__date 09/06
           span.schedule__card__time 14:00~18:00

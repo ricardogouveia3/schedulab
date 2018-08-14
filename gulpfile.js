@@ -31,7 +31,7 @@ gulp.task('js-dev', () => {
   return gulp.src('js/modules/*.js')
     .pipe(uglify())
     .pipe(concat('index.min.js'))
-    .pipe(gulp.dest('/js'));
+    .pipe(gulp.dest('js'));
 });
 
 
