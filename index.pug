@@ -25,20 +25,33 @@ html(lang='pt-br')
       button#addScheduling.add-scheduling +
 
     #modalSchedulingContainer.modal__scheduling
-      .modal__scheduling__darken
+      #modalSchedulingDarken.modal__scheduling__darken
       .modal__scheduling__card
-        h2#schedulingTitle.modal_scheduling__card__title Título
-        form.modal__scheduling__card__form
-          label(for="schedulingData") Início da reserva
-          input#schedulingData(type="datetime-local", name="reservationStart")
-          label(for="schedulingData") Final da reserva
-          input#schedulingData(type="datetime-local", name="reservationEnd")
-          label(for="schedulingData") Propósito
-          input#schedulingData(type="text", name="reservationPorprouse")
-          label(for="schedulingData") Responsável
-          input#schedulingData(type="text", name="reservationUser")
+        h2#schedulingTitle.modal_scheduling__card__title {action} reserva
 
-          input#schedulingData(type="submit", name="reservationSubmit" value="ConfirmText")
+        form.modal__scheduling__card__form
+          label(for="schedulingPlace") Local
+          select#schedulingPlace(type="select", name="reservationPlace")
+            option(value="lab2") Lab 2
+            option(value="lab3") Lab 3
+            option(value="lab4") Lab 4
+
+          label(for="schedulingDate") Data da reserva
+          input#schedulingDate(type="date", name="reservationDate")
+
+          label(for="schedulingHour") Turno da reserva
+          select#schedulingHour(type="select", name="reservationHour")
+            option(value="manha") Manhã
+            option(value="tarde") Tarde
+            option(value="noite") Noite
+
+          label(for="schedulingPorprouse") Propósito
+          input#schedulingPorprouse(type="select", name="reservationPorprouse")
+
+          label(for="schedulingUser") Responsável
+          input#schedulingUser(type="text", name="reservationUser")
+
+          input#schedulingSubmit(type="submit", name="reservationSubmit" value="{action}")
 
 
 
@@ -46,12 +59,14 @@ html(lang='pt-br')
 
       each i in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         .schedule__card
+          .schedule__card__lab
+            span.schedule__card__lab__text Lab 2
           span.schedule__card__date 09/06
-          span.schedule__card__time 14:00~18:00
+          span.schedule__card__time Tarde
           span.schedule__card__task Sist. Dist. BCC2014
           span.schedule__card__user Rennan Maia
           .schedule__card__buttons
-            button.schedule__card__buttons__edit
+            button#scheduleCardButtonsEdit.schedule__card__buttons__edit
             button.schedule__card__buttons__delete
 
     //- JS scripts
