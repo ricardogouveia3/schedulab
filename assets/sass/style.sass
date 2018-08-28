@@ -22,7 +22,6 @@ html
   font-size: 16px
 
 body
-  display: flex
   height: 100%
   max-width: 100%
   min-height: 100vh
@@ -31,7 +30,6 @@ body
   position: relative
   width: 100vw
   background: linear-gradient(to right, $purple-one, $purple-two)
-  flex-wrap: wrap
   padding: 70px
 
 a
@@ -67,7 +65,7 @@ a
   width: 50px
   color: $purple-two
   font-size: 1.5em
-  transition: color, border, background-color, transform .3s ease-in-out
+  transition: color, border, background-color, transform .15s ease-in-out
   display: flex
   justify-content: center
   align-items: center
@@ -75,6 +73,7 @@ a
   position: absolute
   right: 0
   z-index: 20
+  outline: none
 
   &:hover
     color: $white
@@ -156,7 +155,7 @@ a
   display: grid
   width: 100%
   grid-template-columns: repeat(auto-fit, minmax(490px, 1fr))
-  //grid-template-rows: repeat(6, 1fr)
+  grid-template-rows: repeat(auto-fill, minmax(70px, 1fr))
   grid-column-gap: 50px
   grid-row-gap: 20px
 
@@ -170,6 +169,7 @@ a
   align-items: center
   position: relative
   padding-left: 40px
+  height: 70px
 
 .schedule__card__lab,
 .schedule__card__date,

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>Schedulab</title>
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
+    <link rel="logo" type="image/svg" href="assets/img/logo.svg">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="title"> Schedulab</h1><button class="add-scheduling" id="addScheduling">+</button>
+    </header>
+    <div class="modal__scheduling" id="modalSchedulingContainer">
+        <div class="modal__scheduling__darken" id="modalSchedulingDarken"></div>
+        <div class="modal__scheduling__card">
+            <h2 class="modal_scheduling__card__title" id="schedulingTitle">{action} reserva</h2>
+            <form class="modal__scheduling__card__form"><label for="schedulingPlace">Local</label><select id="schedulingPlace" type="select" name="reservationPlace">
+                    <option value="lab2">Lab 2</option>
+                    <option value="lab3">Lab 3</option>
+                    <option value="lab4">Lab 4</option>
+                </select><label for="schedulingDate">Data da reserva</label><input id="schedulingDate" type="date" name="reservationDate"><label for="schedulingHour">Turno da reserva</label><select id="schedulingHour" type="select" name="reservationHour">
+                    <option value="manha">Manhã</option>
+                    <option value="tarde">Tarde</option>
+                    <option value="noite">Noite</option>
+                </select><label for="schedulingPorprouse">Propósito</label><input id="schedulingPorprouse" type="select" name="reservationPorprouse"><label for="schedulingUser">Responsável</label><input id="schedulingUser" type="text" name="reservationUser"><input
+                    id="schedulingSubmit" type="submit" name="reservationSubmit" value="{action}"></form>
+        </div>
+    </div>
+    <div class="schedules">
+        <div class="schedule__card">
+            <div class="schedule__card__lab"><span class="schedule__card__lab__text">Lab 2</span></div><span class="schedule__card__date">09/06</span><span class="schedule__card__time">Tarde</span><span class="schedule__card__task">Sist. Dist.
+                BCC2014</span><span class="schedule__card__user">Rennan Maia</span>
+            <div class="schedule__card__buttons"><button class="schedule__card__buttons__edit" id="scheduleCardButtonsEdit"></button><button class="schedule__card__buttons__delete"></button></div>
+        </div>
+        <div class="schedule__card">
+            <div class="schedule__card__lab"><span class="schedule__card__lab__text">Lab 2</span></div><span class="schedule__card__date">09/06</span><span class="schedule__card__time">Tarde</span><span class="schedule__card__task">Sist. Dist.
+                BCC2014</span><span class="schedule__card__user">Rennan Maia</span>
+            <div class="schedule__card__buttons"><button class="schedule__card__buttons__edit" id="scheduleCardButtonsEdit"></button><button class="schedule__card__buttons__delete"></button></div>
+        </div>
+        <div class="schedule__card">
+            <div class="schedule__card__lab"><span class="schedule__card__lab__text">Lab 2</span></div><span class="schedule__card__date">09/06</span><span class="schedule__card__time">Tarde</span><span class="schedule__card__task">Sist. Dist.
+                BCC2014</span><span class="schedule__card__user">Rennan Maia</span>
+            <div class="schedule__card__buttons"><button class="schedule__card__buttons__edit" id="scheduleCardButtonsEdit"></button><button class="schedule__card__buttons__delete"></button></div>
+        </div>
+        <div class="schedule__card">
+            <div class="schedule__card__lab"><span class="schedule__card__lab__text">Lab 2</span></div><span class="schedule__card__date">09/06</span><span class="schedule__card__time">Tarde</span><span class="schedule__card__task">Sist. Dist.
+                BCC2014</span><span class="schedule__card__user">Rennan Maia</span>
+            <div class="schedule__card__buttons"><button class="schedule__card__buttons__edit" id="scheduleCardButtonsEdit"></button><button class="schedule__card__buttons__delete"></button></div>
+        </div>
+        <div class="schedule__card">
+            <div class="schedule__card__lab"><span class="schedule__card__lab__text">Lab 2</span></div><span class="schedule__card__date">09/06</span><span class="schedule__card__time">Tarde</span><span class="schedule__card__task">Sist. Dist.
+                BCC2014</span><span class="schedule__card__user">Rennan Maia</span>
+            <div class="schedule__card__buttons"><button class="schedule__card__buttons__edit" id="scheduleCardButtonsEdit"></button><button class="schedule__card__buttons__delete"></button></div>
+        </div>
+        <div class="schedule__card">
+            <div class="schedule__card__lab"><span class="schedule__card__lab__text">Lab 2</span></div><span class="schedule__card__date">09/06</span><span class="schedule__card__time">Tarde</span><span class="schedule__card__task">Sist. Dist.
+                BCC2014</span><span class="schedule__card__user">Rennan Maia</span>
+            <div class="schedule__card__buttons"><button class="schedule__card__buttons__edit" id="scheduleCardButtonsEdit"></button><button class="schedule__card__buttons__delete"></button></div>
+        </div>
+        <div class="schedule__card">
+            <div class="schedule__card__lab"><span class="schedule__card__lab__text">Lab 2</span></div><span class="schedule__card__date">09/06</span><span class="schedule__card__time">Tarde</span><span class="schedule__card__task">Sist. Dist.
+                BCC2014</span><span class="schedule__card__user">Rennan Maia</span>
+            <div class="schedule__card__buttons"><button class="schedule__card__buttons__edit" id="scheduleCardButtonsEdit"></button><button class="schedule__card__buttons__delete"></button></div>
+        </div>
+    </div>
+    <script async src="js/index.min.js"></script>
+</body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+<link rel="stylesheet" href="assets/css/style.min.css">
+
+</html>
