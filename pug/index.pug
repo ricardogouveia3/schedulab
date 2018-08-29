@@ -57,10 +57,9 @@ html(lang='pt-br')
 
     .schedules
 
-      each i in [1, 2, 3, 4, 5, 6, 7]
         .schedule__card
-          .schedule__card__lab
-            span.schedule__card__lab__text Lab 2
+          #labTag.schedule__card__lab
+            span#labNumber.schedule__card__lab__text Lab 2
           span.schedule__card__date 09/06
           span.schedule__card__time Tarde
           span.schedule__card__task Sist. Dist. BCC2014
@@ -69,6 +68,27 @@ html(lang='pt-br')
             button#scheduleCardButtonsEdit.schedule__card__buttons__edit
             button.schedule__card__buttons__delete
 
+        .schedule__card
+          #labTag.schedule__card__lab
+            span#labNumber.schedule__card__lab__text Lab 3
+          span.schedule__card__date 09/06
+          span.schedule__card__time Tarde
+          span.schedule__card__task IHC
+          span.schedule__card__user Lincoln Rabelo
+          .schedule__card__buttons
+            button#scheduleCardButtonsEdit.schedule__card__buttons__edit
+            button.schedule__card__buttons__delete
+
+        .schedule__card
+          #labTag.schedule__card__lab
+            span#labNumber.schedule__card__lab__text Lab 4
+          span.schedule__card__date 09/06
+          span.schedule__card__time Noite
+          span.schedule__card__task ICC
+          span.schedule__card__user Rosinei Oliveira
+          .schedule__card__buttons
+            button#scheduleCardButtonsEdit.schedule__card__buttons__edit
+            button.schedule__card__buttons__delete
     //- JS scripts
     //- ===================================
     script(async, src='js/index.min.js')
